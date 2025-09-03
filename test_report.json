@@ -1,0 +1,38 @@
+{
+  "timestamp": "2025-09-03T10:04:41.310368",
+  "summary": {
+    "total_tests": 4,
+    "passed": 0,
+    "failed": 0,
+    "errors": 4,
+    "skipped": 0,
+    "success_rate": 0.0,
+    "duration_seconds": 0.00038979199598543346
+  },
+  "tests": [
+    {
+      "test": "test_claude_code_hooks (unittest.loader._FailedTest.test_claude_code_hooks)",
+      "status": "ERROR",
+      "duration": 5.2624993259087205e-05,
+      "error": "Failed to import test module: test_claude_code_hooks\nTraceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n    ~~~~~~~~~~^^^^^^\n  File \"/Users/hosseins/Dev/AgentSaga/tests/test_claude_code_hooks.py\", line 14, in <module>\n    from src.hooks.claude_code_hooks import (\n    ...<9 lines>...\n    )\nModuleNotFoundError: No module named 'src.hooks.claude_code_hooks'\n"
+    },
+    {
+      "test": "test_eu_format_handler (unittest.loader._FailedTest.test_eu_format_handler)",
+      "status": "ERROR",
+      "duration": 2.937499084509909e-05,
+      "error": "Failed to import test module: test_eu_format_handler\nTraceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n    ~~~~~~~~~~^^^^^^\n  File \"/Users/hosseins/Dev/AgentSaga/tests/test_eu_format_handler.py\", line 12, in <module>\n    from src.parsers.eu_format_handler import (\n    ...<6 lines>...\n    )\nModuleNotFoundError: No module named 'src.parsers.eu_format_handler'\n"
+    },
+    {
+      "test": "test_personnummer_validator (unittest.loader._FailedTest.test_personnummer_validator)",
+      "status": "ERROR",
+      "duration": 2.0750012481585145e-05,
+      "error": "Failed to import test module: test_personnummer_validator\nTraceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n    ~~~~~~~~~~^^^^^^\n  File \"/Users/hosseins/Dev/AgentSaga/tests/test_personnummer_validator.py\", line 11, in <module>\n    from src.validators.personnummer_validator import (\n    ...<4 lines>...\n    )\nModuleNotFoundError: No module named 'src.validators.personnummer_validator'\n"
+    },
+    {
+      "test": "test_xlsx_parser (unittest.loader._FailedTest.test_xlsx_parser)",
+      "status": "ERROR",
+      "duration": 1.795799471437931e-05,
+      "error": "Failed to import test module: test_xlsx_parser\nTraceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n    ~~~~~~~~~~^^^^^^\n  File \"/Users/hosseins/Dev/AgentSaga/tests/test_xlsx_parser.py\", line 7, in <module>\n    import pandas as pd\nModuleNotFoundError: No module named 'pandas'\n"
+    }
+  ]
+}
