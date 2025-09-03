@@ -12,6 +12,10 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "test:infrastructure": "cd tests/infrastructure && python -m pytest -v",
+    "test:llm-tools": "jest --config jest.config.llm-tools.js",
+    "test:llm-tools:coverage": "jest --config jest.config.llm-tools.js --coverage",
+    "test:llm-tools:watch": "jest --config jest.config.llm-tools.js --watch",
+    "test:llm-tools:debug": "node --inspect-brk ./node_modules/.bin/jest --config jest.config.llm-tools.js --runInBand",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
@@ -27,7 +31,8 @@
     "react-dom": "^18.0.0",
     "react-i18next": "^13.5.0",
     "tailwind-merge": "^2.0.0",
-    "tailwindcss": "^3.4.0"
+    "tailwindcss": "^3.4.0",
+    "zod": "^3.22.0"
   },
   "devDependencies": {
     "@testing-library/dom": "^10.4.1",
