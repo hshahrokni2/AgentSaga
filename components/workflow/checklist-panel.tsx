@@ -71,7 +71,12 @@ export function ChecklistPanel({
   const isReadOnly = currentState === 'fully_reviewed' || isTransitioning
 
   return (
-    <GlassCard className="checklist-panel p-6" data-testid="checklist-panel">
+    <GlassCard 
+      className="checklist-panel p-6" 
+      data-testid="checklist-panel"
+      role="complementary"
+      aria-label="Granskning checklista"
+    >
       <div className="space-y-6">
         {/* Header */}
         <div>

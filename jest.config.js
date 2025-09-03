@@ -14,6 +14,7 @@ const customJestConfig = {
     '^@/lib/(.*)$': '<rootDir>/lib/$1',
     '^@/config/(.*)$': '<rootDir>/config/$1',
     '^@/src/(.*)$': '<rootDir>/src/$1',
+    '^@/providers/(.*)$': '<rootDir>/providers/$1',
   },
   collectCoverageFrom: [
     'src/**/*.{ts,tsx}',

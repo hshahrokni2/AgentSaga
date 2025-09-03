@@ -115,7 +115,12 @@ export function CommentDrawer({
   }
 
   return (
-    <GlassCard className="comment-drawer h-full flex flex-col" data-testid="comment-drawer">
+    <GlassCard 
+      className="comment-drawer h-full flex flex-col" 
+      data-testid="comment-drawer"
+      role="aside"
+      aria-label="Kommentarer"
+    >
       {/* Header */}
       <div className="p-6 border-b border-border/50">
         <div className="flex items-center justify-between mb-2">

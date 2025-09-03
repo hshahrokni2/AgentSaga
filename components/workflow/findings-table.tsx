@@ -183,7 +183,12 @@ export function FindingsTable({
   }
 
   return (
-    <GlassCard className="findings-table h-full flex flex-col" data-testid="findings-table">
+    <GlassCard 
+      className="findings-table h-full flex flex-col" 
+      data-testid="findings-table"
+      role="main"
+      aria-label="Granskningsresultat"
+    >
       {/* Header */}
       <div className="p-6 border-b border-border/50">
         <div className="flex items-center justify-between mb-4">
