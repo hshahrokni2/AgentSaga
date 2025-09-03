@@ -1,0 +1,37 @@
+{
+  "project": {
+    "name": "SVOA Lea",
+    "version": "1.0.0",
+    "description": "Data Quality Assurance and Insights Platform for Swedish Waste Management",
+    "environment": "base"
+  },
+  "infrastructure": {
+    "cloud_provider": "aws",
+    "region_preference": "eu_only",
+    "compliance_level": "gdpr_strict",
+    "deployment_strategy": "blue_green"
+  },
+  "application": {
+    "tech_stack": {
+      "backend": "fastapi",
+      "frontend": "nextjs",
+      "database": "postgresql_with_pgvector",
+      "analytics": "duckdb",
+      "cache": "redis",
+      "queue": "celery"
+    },
+    "features": {
+      "multilingual": ["sv", "en"],
+      "accessibility": "wcag_2_1_aa",
+      "ai_integration": true,
+      "real_time_updates": true
+    }
+  },
+  "monitoring": {
+    "observability_stack": "opentelemetry",
+    "metrics": "prometheus",
+    "logs": "structured_json",
+    "traces": "jaeger",
+    "alerting": "pagerduty"
+  }
+}

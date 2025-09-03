@@ -1,0 +1,180 @@
+{
+  "navigation": {
+    "dashboard": "Dashboard",
+    "insights": "Insights",
+    "findings": "Findings", 
+    "scenarios": "Scenarios",
+    "reports": "Reports",
+    "settings": "Settings",
+    "help": "Help",
+    "logout": "Logout"
+  },
+  "dashboard": {
+    "title": "Month Overview",
+    "subtitle": "Data overview for {month} {year}",
+    "clearance": {
+      "title": "Review Status",
+      "green": "Approved",
+      "orange": "Under Review",
+      "red": "Action Required",
+      "ready_for_review": "Ready for Review?",
+      "blockers": "Approval Blockers"
+    },
+    "completeness": {
+      "title": "Data Coverage",
+      "percentage": "{percent}% coverage",
+      "description": "Proportion of delivered vs expected data"
+    },
+    "critical_findings": {
+      "title": "Critical Findings",
+      "count": "{count} open",
+      "description": "Findings requiring immediate attention"
+    },
+    "top_insights": {
+      "title": "Top Insights", 
+      "view_all": "View all insights"
+    }
+  },
+  "insights": {
+    "title": "Insights",
+    "subtitle": "Analyzed patterns and anomalies",
+    "id_format": "INS-{year}-{month:02d}-{number:03d}",
+    "status": {
+      "new": "New",
+      "reviewing": "Under Review",
+      "validated": "Validated",
+      "resolved": "Resolved", 
+      "false_positive": "False Positive"
+    },
+    "severity": {
+      "critical": "Critical",
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low",
+      "info": "Info"
+    },
+    "source": {
+      "rule": "Rule",
+      "ml": "Machine Learning",
+      "human": "Manual",
+      "scenario": "Scenario"
+    },
+    "actions": {
+      "explain": "Explain", 
+      "create_scenario": "Create Scenario",
+      "copy_id": "Copy ID",
+      "merge": "Merge",
+      "split": "Split"
+    }
+  },
+  "findings": {
+    "title": "Findings",
+    "subtitle": "Detected anomalies and issues",
+    "why_flagged": "Why Flagged?",
+    "state": {
+      "new": "New",
+      "triaged": "Triaged",
+      "explained": "Explained",
+      "false_positive": "False Positive",
+      "resolved": "Resolved"
+    },
+    "rules": {
+      "duplicates": "Duplicates",
+      "invalid_facility": "Invalid Facility",
+      "operating_hours": "Operating Hours",
+      "weekend_spike": "Weekend Spike", 
+      "weight_outlier": "Weight Outlier",
+      "vehicle_pattern": "Vehicle Pattern"
+    }
+  },
+  "scenarios": {
+    "title": "Scenario Lab",
+    "subtitle": "What-if analysis and simulation",
+    "id_format": "SCN-{year}-{month:02d}-{number:03d}",
+    "create_new": "Create New Scenario",
+    "parameters": "Parameters",
+    "results": "Results",
+    "diff": "Difference",
+    "save": "Save Scenario",
+    "load": "Load Scenario",
+    "cohort": {
+      "all_suppliers": "All Suppliers",
+      "specific_supplier": "Specific Supplier", 
+      "facility_type": "Facility Type",
+      "time_range": "Time Range"
+    }
+  },
+  "reports": {
+    "title": "Reports",
+    "subtitle": "Monthly and annual reports", 
+    "generate": "Generate Report",
+    "download": "Download",
+    "schedule": "Schedule",
+    "sections": {
+      "summary": "Summary",
+      "data_coverage": "Data Coverage",
+      "key_findings": "Key Findings",
+      "recommendations": "Recommendations",
+      "appendix": "Appendix"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error occurred",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm", 
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "close": "Close",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "export": "Export",
+    "import": "Import",
+    "view": "View",
+    "month": "Month",
+    "year": "Year",
+    "date": "Date",
+    "time": "Time",
+    "supplier": "Supplier",
+    "facility": "Facility",
+    "waste_code": "Waste Code",
+    "weight": "Weight",
+    "quantity": "Quantity",
+    "unit": "Unit",
+    "percentage": "Percentage",
+    "total": "Total",
+    "average": "Average", 
+    "minimum": "Minimum",
+    "maximum": "Maximum"
+  },
+  "accessibility": {
+    "skip_to_content": "Skip to main content",
+    "skip_to_navigation": "Skip to navigation",
+    "open_menu": "Open menu",
+    "close_menu": "Close menu",
+    "toggle_theme": "Toggle theme",
+    "dark_mode": "Dark mode",
+    "light_mode": "Light mode", 
+    "expand_row": "Expand row",
+    "collapse_row": "Collapse row",
+    "sort_ascending": "Sort ascending",
+    "sort_descending": "Sort descending",
+    "page_of": "Page {current} of {total}",
+    "results_found": "{count} results found"
+  },
+  "validation": {
+    "required": "This field is required",
+    "invalid_email": "Invalid email address",
+    "invalid_personnummer": "Invalid personal number",
+    "invalid_org_number": "Invalid organization number",
+    "invalid_date": "Invalid date",
+    "invalid_number": "Invalid number",
+    "min_length": "Minimum {min} characters required",
+    "max_length": "Maximum {max} characters allowed",
+    "file_too_large": "File too large (max {size})",
+    "invalid_file_type": "Invalid file type (only {types} allowed)"
+  }
+}

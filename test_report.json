@@ -1,37 +1,85 @@
 {
-  "timestamp": "2025-09-03T10:04:41.310368",
+  "timestamp": "2025-09-03T14:15:14.343503",
   "summary": {
-    "total_tests": 4,
+    "total_tests": 12,
     "passed": 0,
     "failed": 0,
-    "errors": 4,
+    "errors": 12,
     "skipped": 0,
     "success_rate": 0.0,
-    "duration_seconds": 0.00038979199598543346
+    "duration_seconds": 0.0012572499981615692
   },
   "tests": [
     {
+      "test": "test_agent_guardrails_safety (unittest.loader._FailedTest.test_agent_guardrails_safety)",
+      "status": "ERROR",
+      "duration": 5.729100666940212e-05,
+      "error": "Failed to import test module: test_agent_guardrails_safety\nTraceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n    ~~~~~~~~~~^^^^^^\n  File \"/Users/hosseins/Dev/AgentSaga/tests/test_agent_guardrails_safety.py\", line 18, in <module>\n    from src.services.agent_guardrails import (\n    ...<6 lines>...\n    )\nModuleNotFoundError: No module named 'src.services.agent_guardrails'\n"
+    },
+    {
       "test": "test_claude_code_hooks (unittest.loader._FailedTest.test_claude_code_hooks)",
       "status": "ERROR",
-      "duration": 5.2624993259087205e-05,
+      "duration": 6.33329909760505e-05,
       "error": "Failed to import test module: test_claude_code_hooks\nTraceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n    ~~~~~~~~~~^^^^^^\n  File \"/Users/hosseins/Dev/AgentSaga/tests/test_claude_code_hooks.py\", line 14, in <module>\n    from src.hooks.claude_code_hooks import (\n    ...<9 lines>...\n    )\nModuleNotFoundError: No module named 'src.hooks.claude_code_hooks'\n"
+    },
+    {
+      "test": "test_cross_database_consistency (unittest.loader._FailedTest.test_cross_database_consistency)",
+      "status": "ERROR",
+      "duration": 0.00020208398927934468,
+      "error": "Failed to import test module: test_cross_database_consistency\nTraceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n    ~~~~~~~~~~^^^^^^\n  File \"/Users/hosseins/Dev/AgentSaga/tests/test_cross_database_consistency.py\", line 17, in <module>\n    import pandas as pd\nModuleNotFoundError: No module named 'pandas'\n"
+    },
+    {
+      "test": "test_database_schema (unittest.loader._FailedTest.test_database_schema)",
+      "status": "ERROR",
+      "duration": 3.8749974919483066e-05,
+      "error": "Failed to import test module: test_database_schema\nTraceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n    ~~~~~~~~~~^^^^^^\n  File \"/Users/hosseins/Dev/AgentSaga/tests/test_database_schema.py\", line 15, in <module>\n    import asyncpg\nModuleNotFoundError: No module named 'asyncpg'\n"
+    },
+    {
+      "test": "test_dbt_models (unittest.loader._FailedTest.test_dbt_models)",
+      "status": "ERROR",
+      "duration": 2.3917004000395536e-05,
+      "error": "Failed to import test module: test_dbt_models\nTraceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n    ~~~~~~~~~~^^^^^^\n  File \"/Users/hosseins/Dev/AgentSaga/tests/test_dbt_models.py\", line 19, in <module>\n    import pandas as pd\nModuleNotFoundError: No module named 'pandas'\n"
+    },
+    {
+      "test": "test_duckdb_analytics (unittest.loader._FailedTest.test_duckdb_analytics)",
+      "status": "ERROR",
+      "duration": 2.016598591580987e-05,
+      "error": "Failed to import test module: test_duckdb_analytics\nTraceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n    ~~~~~~~~~~^^^^^^\n  File \"/Users/hosseins/Dev/AgentSaga/tests/test_duckdb_analytics.py\", line 13, in <module>\n    import pandas as pd\nModuleNotFoundError: No module named 'pandas'\n"
     },
     {
       "test": "test_eu_format_handler (unittest.loader._FailedTest.test_eu_format_handler)",
       "status": "ERROR",
-      "duration": 2.937499084509909e-05,
+      "duration": 1.9458006136119366e-05,
       "error": "Failed to import test module: test_eu_format_handler\nTraceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n    ~~~~~~~~~~^^^^^^\n  File \"/Users/hosseins/Dev/AgentSaga/tests/test_eu_format_handler.py\", line 12, in <module>\n    from src.parsers.eu_format_handler import (\n    ...<6 lines>...\n    )\nModuleNotFoundError: No module named 'src.parsers.eu_format_handler'\n"
+    },
+    {
+      "test": "test_human_friendly_ids (unittest.loader._FailedTest.test_human_friendly_ids)",
+      "status": "ERROR",
+      "duration": 1.841600169427693e-05,
+      "error": "Failed to import test module: test_human_friendly_ids\nTraceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n    ~~~~~~~~~~^^^^^^\n  File \"/Users/hosseins/Dev/AgentSaga/tests/test_human_friendly_ids.py\", line 16, in <module>\n    import asyncpg\nModuleNotFoundError: No module named 'asyncpg'\n"
+    },
+    {
+      "test": "test_index_performance (unittest.loader._FailedTest.test_index_performance)",
+      "status": "ERROR",
+      "duration": 5.154198152013123e-05,
+      "error": "Failed to import test module: test_index_performance\nTraceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n    ~~~~~~~~~~^^^^^^\n  File \"/Users/hosseins/Dev/AgentSaga/tests/test_index_performance.py\", line 17, in <module>\n    import asyncpg\nModuleNotFoundError: No module named 'asyncpg'\n"
     },
     {
       "test": "test_personnummer_validator (unittest.loader._FailedTest.test_personnummer_validator)",
       "status": "ERROR",
-      "duration": 2.0750012481585145e-05,
+      "duration": 3.145798109471798e-05,
       "error": "Failed to import test module: test_personnummer_validator\nTraceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n    ~~~~~~~~~~^^^^^^\n  File \"/Users/hosseins/Dev/AgentSaga/tests/test_personnummer_validator.py\", line 11, in <module>\n    from src.validators.personnummer_validator import (\n    ...<4 lines>...\n    )\nModuleNotFoundError: No module named 'src.validators.personnummer_validator'\n"
+    },
+    {
+      "test": "test_pgvector_performance (unittest.loader._FailedTest.test_pgvector_performance)",
+      "status": "ERROR",
+      "duration": 1.7499987734481692e-05,
+      "error": "Failed to import test module: test_pgvector_performance\nTraceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n    ~~~~~~~~~~^^^^^^\n  File \"/Users/hosseins/Dev/AgentSaga/tests/test_pgvector_performance.py\", line 13, in <module>\n    import numpy as np\nModuleNotFoundError: No module named 'numpy'\n"
     },
     {
       "test": "test_xlsx_parser (unittest.loader._FailedTest.test_xlsx_parser)",
       "status": "ERROR",
-      "duration": 1.795799471437931e-05,
+      "duration": 1.650000922381878e-05,
       "error": "Failed to import test module: test_xlsx_parser\nTraceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n    ~~~~~~~~~~^^^^^^\n  File \"/Users/hosseins/Dev/AgentSaga/tests/test_xlsx_parser.py\", line 7, in <module>\n    import pandas as pd\nModuleNotFoundError: No module named 'pandas'\n"
     }
   ]

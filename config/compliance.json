@@ -1,0 +1,174 @@
+{
+  "compliance": {
+    "gdpr": {
+      "data_residency": {
+        "requirement": "EU/EES",
+        "allowed_regions": ["eu-north-1", "eu-central-1", "eu-west-1"],
+        "cross_border_transfer": false,
+        "third_country_processing": false
+      },
+      "retention": {
+        "default_years": 7,
+        "legal_basis": "legitimate_interest",
+        "automatic_deletion": false,
+        "manual_review_required": true,
+        "grace_period_days": 30
+      },
+      "rights": {
+        "access": true,
+        "rectification": true,
+        "erasure": true,
+        "portability": true,
+        "restriction": true,
+        "objection": true,
+        "automated_decision_making": false
+      },
+      "consent_management": {
+        "explicit_consent": true,
+        "granular_controls": true,
+        "withdrawal_mechanism": true,
+        "consent_logging": true,
+        "renewal_period_months": 24
+      },
+      "breach_notification": {
+        "authority_notification_hours": 72,
+        "data_subject_notification": true,
+        "breach_register": true,
+        "risk_assessment_required": true,
+        "notification_template": "gdpr_breach_template_sv"
+      }
+    },
+    "swedish_specific": {
+      "language_support": {
+        "primary": "sv",
+        "secondary": "en", 
+        "rtl_support": false,
+        "character_encoding": "UTF-8",
+        "special_characters": ["å", "ä", "ö"]
+      },
+      "accessibility": {
+        "standard": "WCAG 2.1 AA",
+        "screen_reader_support": true,
+        "keyboard_navigation": true,
+        "color_contrast_ratio": 4.5,
+        "text_scaling": true,
+        "focus_indicators": true
+      },
+      "data_protection": {
+        "personnummer_handling": {
+          "validation": true,
+          "encryption_required": true,
+          "access_logging": true,
+          "purpose_limitation": true,
+          "retention_years": 7
+        },
+        "organization_number": {
+          "validation": true,
+          "public_data": true,
+          "verification_required": false
+        },
+        "pii_detection": {
+          "automatic_scanning": true,
+          "false_positive_review": true,
+          "alert_threshold": "medium",
+          "remediation_required": true
+        }
+      },
+      "waste_management_domain": {
+        "facility_codes": {
+          "validation_required": true,
+          "national_registry": true,
+          "update_frequency_days": 30
+        },
+        "waste_codes": {
+          "eu_waste_catalogue": true,
+          "swedish_extensions": true,
+          "hazardous_material_flags": true
+        },
+        "supplier_validation": {
+          "permit_verification": true,
+          "certification_checks": true,
+          "audit_trail_required": true
+        }
+      }
+    },
+    "security": {
+      "encryption": {
+        "tls_min_version": "1.3",
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_CHACHA20_POLY1305_SHA256"
+        ],
+        "perfect_forward_secrecy": true,
+        "certificate_pinning": false,
+        "hsts_enabled": true
+      },
+      "authentication": {
+        "mfa_required": true,
+        "session_timeout_minutes": 30,
+        "max_login_attempts": 3,
+        "lockout_duration_minutes": 15,
+        "password_policy": {
+          "min_length": 12,
+          "require_uppercase": true,
+          "require_lowercase": true,
+          "require_numbers": true,
+          "require_symbols": true,
+          "history_count": 12,
+          "expiry_days": 90
+        }
+      },
+      "audit": {
+        "retention_days": 365,
+        "immutable_logs": true,
+        "real_time_monitoring": true,
+        "alert_on_privileged_access": true,
+        "geographic_anomaly_detection": true,
+        "automated_response": {
+          "suspicious_login": "alert_and_lock",
+          "data_exfiltration": "alert_and_block",
+          "privilege_escalation": "alert_and_terminate"
+        }
+      }
+    },
+    "performance_requirements": {
+      "availability": {
+        "uptime_percentage": 99.9,
+        "max_downtime_minutes_per_month": 43,
+        "planned_maintenance_window": "Sunday 02:00-06:00 CET"
+      },
+      "response_times": {
+        "api_latency_p95_ms": 100,
+        "ui_page_load_p95_ms": 1500,
+        "report_generation_max_minutes": 10,
+        "email_processing_max_seconds": 30
+      },
+      "scalability": {
+        "max_concurrent_users": 500,
+        "max_suppliers": 1000,
+        "max_monthly_records": 1000000,
+        "storage_growth_tb_per_year": 10
+      }
+    },
+    "cost_controls": {
+      "monthly_limits": {
+        "infrastructure_eur": 5000,
+        "ai_model_calls_eur": 1000,
+        "storage_costs_eur": 500,
+        "email_service_eur": 200
+      },
+      "optimization": {
+        "auto_scaling": true,
+        "intelligent_tiering": true,
+        "reserved_instances": true,
+        "cost_anomaly_detection": true
+      },
+      "alerts": {
+        "80_percent_threshold": true,
+        "daily_spending_spike_percent": 50,
+        "weekly_budget_projection": true
+      }
+    }
+  }
+}

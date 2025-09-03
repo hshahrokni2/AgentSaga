@@ -1,0 +1,180 @@
+{
+  "navigation": {
+    "dashboard": "Översikt",
+    "insights": "Insikter", 
+    "findings": "Fynd",
+    "scenarios": "Scenarier",
+    "reports": "Rapporter",
+    "settings": "Inställningar",
+    "help": "Hjälp",
+    "logout": "Logga ut"
+  },
+  "dashboard": {
+    "title": "Månadsöversikt",
+    "subtitle": "Dataöversikt för {month} {year}",
+    "clearance": {
+      "title": "Granskningsstatus",
+      "green": "Godkänd",
+      "orange": "Under granskning", 
+      "red": "Kräver åtgärd",
+      "ready_for_review": "Redo för granskning?",
+      "blockers": "Hinder för godkännande"
+    },
+    "completeness": {
+      "title": "Datatäckning",
+      "percentage": "{percent}% täckning",
+      "description": "Andel levererad data vs förväntat"
+    },
+    "critical_findings": {
+      "title": "Kritiska fynd",
+      "count": "{count} öppna",
+      "description": "Fynd som kräver omedelbar åtgärd"
+    },
+    "top_insights": {
+      "title": "Viktigaste insikter",
+      "view_all": "Visa alla insikter"
+    }
+  },
+  "insights": {
+    "title": "Insikter",
+    "subtitle": "Analyserade mönster och avvikelser",
+    "id_format": "INS-{year}-{month:02d}-{number:03d}",
+    "status": {
+      "new": "Ny",
+      "reviewing": "Under granskning",
+      "validated": "Validerad", 
+      "resolved": "Löst",
+      "false_positive": "Falskt larm"
+    },
+    "severity": {
+      "critical": "Kritisk",
+      "high": "Hög",
+      "medium": "Medium", 
+      "low": "Låg",
+      "info": "Information"
+    },
+    "source": {
+      "rule": "Regel",
+      "ml": "Maskininlärning",
+      "human": "Manuell", 
+      "scenario": "Scenario"
+    },
+    "actions": {
+      "explain": "Förklara",
+      "create_scenario": "Skapa scenario",
+      "copy_id": "Kopiera ID",
+      "merge": "Slå samman",
+      "split": "Dela upp"
+    }
+  },
+  "findings": {
+    "title": "Fynd",
+    "subtitle": "Detekterade avvikelser och problem", 
+    "why_flagged": "Varför flaggad?",
+    "state": {
+      "new": "Ny",
+      "triaged": "Triagerad",
+      "explained": "Förklarad",
+      "false_positive": "Falskt larm",
+      "resolved": "Löst"
+    },
+    "rules": {
+      "duplicates": "Dubbletter",
+      "invalid_facility": "Ogiltig anläggning",
+      "operating_hours": "Arbetstid",
+      "weekend_spike": "Helgtopp",
+      "weight_outlier": "Viktavvikelse",
+      "vehicle_pattern": "Fordonsmönster"
+    }
+  },
+  "scenarios": {
+    "title": "Scenariolab",
+    "subtitle": "What-if analys och simulering",
+    "id_format": "SCN-{year}-{month:02d}-{number:03d}",
+    "create_new": "Skapa nytt scenario",
+    "parameters": "Parametrar",
+    "results": "Resultat",
+    "diff": "Förändring",
+    "save": "Spara scenario",
+    "load": "Ladda scenario",
+    "cohort": {
+      "all_suppliers": "Alla leverantörer",
+      "specific_supplier": "Specifik leverantör",
+      "facility_type": "Anläggningstyp",
+      "time_range": "Tidsperiod"
+    }
+  },
+  "reports": {
+    "title": "Rapporter", 
+    "subtitle": "Månads- och årsrapporter",
+    "generate": "Generera rapport",
+    "download": "Ladda ner",
+    "schedule": "Schemalägg",
+    "sections": {
+      "summary": "Sammanfattning",
+      "data_coverage": "Datatäckning", 
+      "key_findings": "Viktiga fynd",
+      "recommendations": "Rekommendationer",
+      "appendix": "Bilaga"
+    }
+  },
+  "common": {
+    "loading": "Laddar...",
+    "error": "Fel uppstod",
+    "success": "Lyckades",
+    "cancel": "Avbryt",
+    "confirm": "Bekräfta",
+    "save": "Spara",
+    "edit": "Redigera",
+    "delete": "Ta bort",
+    "close": "Stäng",
+    "search": "Sök",
+    "filter": "Filtrera",
+    "sort": "Sortera",
+    "export": "Exportera",
+    "import": "Importera",
+    "view": "Visa",
+    "month": "Månad",
+    "year": "År",
+    "date": "Datum",
+    "time": "Tid",
+    "supplier": "Leverantör",
+    "facility": "Anläggning",
+    "waste_code": "Avfallskod",
+    "weight": "Vikt",
+    "quantity": "Kvantitet",
+    "unit": "Enhet",
+    "percentage": "Procent",
+    "total": "Totalt",
+    "average": "Medelvärde",
+    "minimum": "Minimum",
+    "maximum": "Maximum"
+  },
+  "accessibility": {
+    "skip_to_content": "Hoppa till huvudinnehåll",
+    "skip_to_navigation": "Hoppa till navigering", 
+    "open_menu": "Öppna meny",
+    "close_menu": "Stäng meny",
+    "toggle_theme": "Växla tema",
+    "dark_mode": "Mörkt tema",
+    "light_mode": "Ljust tema",
+    "expand_row": "Expandera rad",
+    "collapse_row": "Kollapsa rad",
+    "sort_ascending": "Sortera stigande",
+    "sort_descending": "Sortera fallande",
+    "page_of": "Sida {current} av {total}",
+    "results_found": "{count} resultat hittades"
+  },
+  "validation": {
+    "required": "Detta fält är obligatoriskt",
+    "invalid_email": "Ogiltig e-postadress",
+    "invalid_personnummer": "Ogiltigt personnummer",
+    "invalid_org_number": "Ogiltigt organisationsnummer",
+    "invalid_date": "Ogiltigt datum",
+    "invalid_number": "Ogiltigt nummer",
+    "min_length": "Minst {min} tecken krävs",
+    "max_length": "Högst {max} tecken tillåtet",
+    "file_too_large": "Filen är för stor (max {size})",
+    "invalid_file_type": "Ogiltig filtyp (endast {types} tillåtet)"
+  }
+}

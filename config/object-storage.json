@@ -1,0 +1,124 @@
+{
+  "object_storage": {
+    "provider": "aws_s3",
+    "service_name": "svoa-lea-storage",
+    "regions": {
+      "primary": "eu-north-1",
+      "backup": "eu-central-1",
+      "cross_region_replication": true,
+      "replication_delay_max_minutes": 15
+    },
+    "buckets": {
+      "raw_documents": {
+        "name": "svoa-lea-raw-docs",
+        "versioning": true,
+        "lifecycle_days": 365,
+        "archival_tier_days": 90,
+        "public_access": false
+      },
+      "processed_data": {
+        "name": "svoa-lea-processed",
+        "versioning": true,
+        "lifecycle_days": 1826,
+        "archival_tier_days": 365,
+        "public_access": false
+      },
+      "report_artifacts": {
+        "name": "svoa-lea-reports",
+        "versioning": true,
+        "lifecycle_days": 1826,
+        "archival_tier_days": 90,
+        "public_access": false
+      },
+      "evidence_packs": {
+        "name": "svoa-lea-evidence",
+        "versioning": true,
+        "lifecycle_days": 1826,
+        "immutable": true,
+        "public_access": false
+      }
+    },
+    "encryption": {
+      "at_rest": {
+        "algorithm": "AES-256",
+        "key_management": "customer_managed",
+        "kms_key_rotation": true,
+        "rotation_days": 90
+      },
+      "in_transit": {
+        "tls_version": "1.3",
+        "enforce_ssl": true,
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_AES_128_GCM_SHA256"
+        ]
+      }
+    },
+    "access_control": {
+      "signed_urls": {
+        "default_expiry_minutes": 60,
+        "max_expiry_hours": 24,
+        "ip_restriction": true,
+        "user_agent_validation": false
+      },
+      "iam_roles": {
+        "read_only": "SvoaLeaStorageReader",
+        "read_write": "SvoaLeaStorageWriter",
+        "admin": "SvoaLeaStorageAdmin"
+      },
+      "bucket_policies": {
+        "enforce_encryption": true,
+        "deny_insecure_transport": true,
+        "require_mfa_for_delete": true
+      }
+    },
+    "monitoring": {
+      "cloudwatch_metrics": true,
+      "custom_metrics": [
+        "upload_success_rate",
+        "download_latency_p99",
+        "storage_utilization",
+        "lifecycle_transition_success"
+      ],
+      "alerts": {
+        "upload_failure_threshold": 5,
+        "download_latency_threshold_ms": 200,
+        "storage_cost_increase_percent": 25,
+        "replication_lag_minutes": 30
+      }
+    },
+    "compliance": {
+      "retention_policy": {
+        "years": 5,
+        "deletion_policy": "manual_with_audit",
+        "legal_hold_support": true
+      },
+      "data_residency": {
+        "enforce_eu_only": true,
+        "allowed_regions": ["eu-north-1", "eu-central-1", "eu-west-1"],
+        "cross_border_restriction": true
+      },
+      "audit_logging": {
+        "access_logs": true,
+        "data_events": true,
+        "management_events": true,
+        "log_retention_days": 365,
+        "log_encryption": true
+      }
+    },
+    "performance": {
+      "transfer_acceleration": false,
+      "multipart_upload": {
+        "enabled": true,
+        "threshold_mb": 100,
+        "part_size_mb": 10,
+        "max_parts": 1000
+      },
+      "intelligent_tiering": {
+        "enabled": true,
+        "archive_days": 90,
+        "deep_archive_days": 180
+      }
+    }
+  }
+}

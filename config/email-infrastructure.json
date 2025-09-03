@@ -1,0 +1,80 @@
+{
+  "email_infrastructure": {
+    "provider": "aws_ses_eu",
+    "service_name": "svoa-lea-email",
+    "regions": {
+      "primary": "eu-north-1",
+      "secondary": "eu-central-1", 
+      "fallback": "eu-west-1"
+    },
+    "inbound": {
+      "receive_only": true,
+      "webhook_endpoint": "/api/v1/email/webhook",
+      "max_attachment_size_mb": 25,
+      "allowed_file_types": ["xlsx", "csv", "xls"],
+      "dkim_validation": {
+        "enabled": true,
+        "strict_mode": true,
+        "fallback_on_failure": false
+      },
+      "dmarc_enforcement": {
+        "enabled": true,
+        "policy": "quarantine",
+        "alignment_mode": "strict"
+      },
+      "forwarded_thread_processing": {
+        "enabled": true,
+        "max_depth": 10,
+        "parse_nested_attachments": true,
+        "thread_deduplication": true
+      },
+      "supplier_allowlist": {
+        "validation_method": "email_domain",
+        "require_per_supplier_tokens": true,
+        "token_rotation_days": 90
+      }
+    },
+    "outbound": {
+      "isolated_service": true,
+      "service_name": "svoa-lea-notifications",
+      "encryption_in_transit": true,
+      "eu_routing_only": true,
+      "reputation_management": {
+        "dedicated_ip": true,
+        "bounce_handling": true,
+        "complaint_handling": true
+      },
+      "rate_limits": {
+        "per_minute": 50,
+        "per_hour": 1000,
+        "per_day": 10000
+      }
+    },
+    "authentication": {
+      "api_keys": {
+        "rotation_days": 30,
+        "key_length": 256,
+        "algorithm": "HMAC-SHA256"
+      },
+      "webhook_verification": {
+        "signature_validation": true,
+        "timestamp_tolerance_minutes": 5,
+        "replay_attack_prevention": true
+      }
+    },
+    "monitoring": {
+      "cloudwatch_metrics": true,
+      "custom_metrics": [
+        "email_processing_latency",
+        "attachment_extraction_success_rate",
+        "dkim_validation_failures",
+        "webhook_processing_errors"
+      ],
+      "alerts": {
+        "webhook_failure_threshold": 5,
+        "processing_latency_threshold_ms": 500,
+        "attachment_size_violation_threshold": 10
+      }
+    }
+  }
+}

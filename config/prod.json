@@ -1,0 +1,59 @@
+{
+  "environment": "production",
+  "debug": false,
+  "database": {
+    "host": "${DATABASE_HOST}",
+    "port": 5432,
+    "name": "svoa_lea_prod",
+    "pool_size": 20,
+    "echo_sql": false,
+    "ssl_required": true
+  },
+  "redis": {
+    "host": "${REDIS_HOST}",
+    "port": 6380,
+    "db": 0,
+    "ssl": true,
+    "password": "${REDIS_PASSWORD}"
+  },
+  "object_storage": {
+    "provider": "aws_s3",
+    "region": "eu-north-1",
+    "bucket_prefix": "svoa-lea-prod-",
+    "encryption": true,
+    "versioning": true
+  },
+  "email": {
+    "provider": "aws_ses",
+    "region": "eu-north-1",
+    "webhook_endpoint": "https://api.svoa-lea.se/api/v1/email/webhook",
+    "send_real_emails": true,
+    "rate_limit_per_second": 14
+  },
+  "ai_models": {
+    "primary": "claude-3-5-sonnet-20241022",
+    "fallback": ["gpt-4o", "gemini-1.5-pro"],
+    "cost_limit_eur": 1000,
+    "usage_monitoring": true
+  },
+  "security": {
+    "jwt_secret": "${JWT_SECRET}",
+    "cors_origins": ["https://svoa-lea.se", "https://app.svoa-lea.se"],
+    "tls_required": true,
+    "hsts_enabled": true,
+    "csrf_protection": true
+  },
+  "performance": {
+    "cache_ttl_seconds": 3600,
+    "rate_limit_per_minute": 100,
+    "async_task_timeout_seconds": 1800,
+    "cdn_enabled": true
+  },
+  "monitoring": {
+    "log_level": "INFO",
+    "metrics_enabled": true,
+    "tracing_sample_rate": 0.1,
+    "error_reporting": true,
+    "performance_monitoring": true
+  }
+}

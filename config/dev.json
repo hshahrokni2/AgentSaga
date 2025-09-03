@@ -1,0 +1,43 @@
+{
+  "environment": "development",
+  "debug": true,
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "name": "svoa_lea_dev",
+    "pool_size": 5,
+    "echo_sql": true
+  },
+  "redis": {
+    "host": "localhost", 
+    "port": 6379,
+    "db": 0
+  },
+  "object_storage": {
+    "provider": "minio",
+    "endpoint": "http://localhost:9000",
+    "access_key": "dev_access_key",
+    "secret_key": "dev_secret_key",
+    "bucket_prefix": "svoa-lea-dev-"
+  },
+  "email": {
+    "provider": "mock",
+    "webhook_endpoint": "http://localhost:8000/api/v1/email/webhook",
+    "send_real_emails": false
+  },
+  "ai_models": {
+    "primary": "claude-3-5-sonnet-20241022",
+    "fallback": "gpt-4o-mini",
+    "cost_limit_eur": 50
+  },
+  "security": {
+    "jwt_secret": "dev_jwt_secret_key_not_for_production",
+    "cors_origins": ["http://localhost:3000", "http://127.0.0.1:3000"],
+    "tls_required": false
+  },
+  "performance": {
+    "cache_ttl_seconds": 60,
+    "rate_limit_per_minute": 1000,
+    "async_task_timeout_seconds": 300
+  }
+}

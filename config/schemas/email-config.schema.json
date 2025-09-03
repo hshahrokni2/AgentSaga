@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SVOA Lea Email Infrastructure Configuration Schema",
+  "type": "object",
+  "properties": {
+    "email_infrastructure": {
+      "type": "object",
+      "properties": {
+        "provider": {
+          "type": "string",
+          "enum": ["aws_ses_eu", "azure_communication", "postmark_eu"]
+        },
+        "service_name": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "regions": {
+          "type": "object",
+          "properties": {
+            "primary": {"type": "string", "pattern": "^eu-[a-z0-9-]+$"},
+            "secondary": {"type": "string", "pattern": "^eu-[a-z0-9-]+$"},
+            "fallback": {"type": "string", "pattern": "^eu-[a-z0-9-]+$"}
+          },
+          "required": ["primary"]
+        },
+        "inbound": {
+          "type": "object",
+          "properties": {
+            "receive_only": {"type": "boolean"},
+            "webhook_endpoint": {"type": "string", "pattern": "^/api/v\\d+/"},
+            "max_attachment_size_mb": {"type": "integer", "minimum": 1, "maximum": 100},
+            "allowed_file_types": {
+              "type": "array",
+              "items": {"type": "string", "enum": ["xlsx", "csv", "xls"]}
+            },
+            "dkim_validation": {
+              "type": "object",
+              "properties": {
+                "enabled": {"type": "boolean"},
+                "strict_mode": {"type": "boolean"},
+                "fallback_on_failure": {"type": "boolean"}
+              },
+              "required": ["enabled"]
+            }
+          },
+          "required": ["receive_only", "webhook_endpoint"]
+        }
+      },
+      "required": ["provider", "service_name", "regions", "inbound"]
+    }
+  },
+  "required": ["email_infrastructure"]
+}

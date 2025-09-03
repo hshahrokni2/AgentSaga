@@ -15,28 +15,47 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "next": "^14.0.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
     "@tailwindcss/forms": "^0.5.0",
-    "tailwindcss": "^3.4.0",
-    "lucide-react": "^0.400.0",
+    "autoprefixer": "^10.4.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
-    "tailwind-merge": "^2.0.0"
+    "i18next": "^23.8.0",
+    "lucide-react": "^0.400.0",
+    "next": "^14.0.0",
+    "postcss": "^8.4.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-i18next": "^13.5.0",
+    "tailwind-merge": "^2.0.0",
+    "tailwindcss": "^3.4.0"
   },
   "devDependencies": {
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^14.3.1",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^30.0.0",
     "@types/node": "^20.0.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "typescript": "^5.0.0",
     "eslint": "^8.0.0",
     "eslint-config-next": "^14.0.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^29.0.0",
-    "@testing-library/react": "^14.0.0",
-    "@testing-library/jest-dom": "^6.0.0"
+    "jest-axe": "^8.0.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-junit": "^16.0.0",
+    "jest-watch-typeahead": "^2.2.2",
+    "ts-jest": "^29.4.1",
+    "typescript": "^5.0.0"
   },
-  "keywords": ["waste-management", "data-qa", "eu-compliance", "ai-insights", "archon-inspired"],
+  "keywords": [
+    "waste-management",
+    "data-qa",
+    "eu-compliance",
+    "ai-insights",
+    "archon-inspired"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/svoa/lea-platform.git"

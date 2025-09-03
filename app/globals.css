@@ -1,0 +1,229 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Inter font for better Swedish character rendering */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@layer base {
+  :root {
+    /* Light theme - WCAG AAA compliant */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Dark theme - WCAG AAA compliant with Swedish accessibility standards */
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 94.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    /* Optimized for Swedish characters */
+    font-feature-settings: "kern" 1, "liga" 1, "case" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* High contrast mode support for accessibility */
+  @media (prefers-contrast: high) {
+    :root {
+      --primary: 0 0% 0%;
+      --primary-foreground: 0 0% 100%;
+      --secondary: 0 0% 100%;
+      --secondary-foreground: 0 0% 0%;
+    }
+  }
+
+  /* Reduced motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Focus styles for keyboard navigation */
+  *:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+
+  /* Skip link for accessibility */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    padding: 8px;
+    z-index: 1000;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
+  .skip-link:focus {
+    top: 6px;
+  }
+}
+
+@layer components {
+  /* Glassmorphism card component */
+  .glass-card {
+    @apply glass rounded-lg p-6 shadow-lg transition-all duration-300;
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+  }
+
+  .glass-card:hover {
+    @apply shadow-xl;
+    backdrop-filter: blur(16px) saturate(200%);
+    -webkit-backdrop-filter: blur(16px) saturate(200%);
+  }
+
+  /* Swedish text handling */
+  .swedish-text {
+    /* Ensure proper rendering of åäö characters */
+    font-variant-numeric: oldstyle-nums;
+    hyphens: auto;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Archon-inspired navigation */
+  .nav-shell {
+    @apply glass-card fixed top-0 left-0 right-0 z-50 p-4;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
+
+  /* Custom components */
+  .clearance-bar {
+    @apply h-2 rounded-full overflow-hidden bg-gray-200 dark:bg-gray-700;
+    background: linear-gradient(to right, var(--green) 0%, var(--orange) 50%, var(--red) 100%);
+  }
+
+  .confidence-chip {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+    min-height: 24px; /* Accessibility - sufficient contrast */
+  }
+
+  .insight-card {
+    @apply glass-card hover:scale-105 transition-transform cursor-pointer;
+    min-height: 120px; /* Touch target accessibility */
+  }
+
+  /* Responsive design utilities */
+  .container-responsive {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+    max-width: 1400px;
+  }
+
+  /* Swedish number formatting helper */
+  .swedish-number {
+    /* Space as thousand separator, comma as decimal */
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer utilities {
+  /* Touch-friendly minimum sizes */
+  .touch-target {
+    @apply min-h-touch min-w-touch;
+  }
+
+  /* Glassmorphism effect utilities */
+  .backdrop-blur-glass {
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+  }
+
+  /* Animation utilities with reduced motion support */
+  .animate-glass-in {
+    animation: glass-in 0.5s ease-out;
+  }
+
+  @keyframes glass-in {
+    from {
+      opacity: 0;
+      backdrop-filter: blur(0px);
+      -webkit-backdrop-filter: blur(0px);
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      backdrop-filter: blur(12px) saturate(180%);
+      -webkit-backdrop-filter: blur(12px) saturate(180%);
+      transform: translateY(0);
+    }
+  }
+
+  /* High contrast mode utilities */
+  .high-contrast {
+    @apply border-2 border-solid;
+  }
+
+  /* Swedish-specific utilities */
+  .swedish-sort::after {
+    content: " (å, ä, ö kommer efter z)";
+    @apply text-xs text-muted-foreground;
+  }
+
+  /* Print styles for reports */
+  @media print {
+    .glass,
+    .glass-card {
+      background: white !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      border: 1px solid #000 !important;
+    }
+  }
+}
