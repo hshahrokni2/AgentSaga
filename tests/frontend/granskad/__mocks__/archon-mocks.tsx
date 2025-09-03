@@ -2,6 +2,7 @@
  * Mock implementations for Archon API and services
  * Used for testing Granskad workflow components
  */
+import React from 'react'
 
 export interface MockArchonAPI {
   createAuditLog: jest.Mock;
