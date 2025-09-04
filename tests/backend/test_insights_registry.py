@@ -3,6 +3,7 @@ TDD RED Phase Tests for Insights Registry with Evidence Linking
 """
 
 import pytest
+import pytest_asyncio
 import asyncio
 from datetime import datetime, timedelta
 from decimal import Decimal
@@ -214,7 +215,7 @@ class TestInsightClustering:
 class TestEvidenceLinking:
     """Test evidence linking to insights"""
     
-    @pytest.fixture
+    @pytest_asyncio.fixture
     async def evidence_linker(self):
         """Create evidence linker instance"""
         from src.services.insights_registry import EvidenceLinker
@@ -319,7 +320,7 @@ class TestEvidenceLinking:
 class TestInsightMergeSplit:
     """Test merge and split operations for insights"""
     
-    @pytest.fixture
+    @pytest_asyncio.fixture
     async def insight_merger(self):
         """Create insight merger instance"""
         from src.services.insights_registry import InsightMerger
@@ -416,7 +417,7 @@ class TestInsightMergeSplit:
 class TestStatusAndAuditTrail:
     """Test status tracking and audit trail generation"""
     
-    @pytest.fixture
+    @pytest_asyncio.fixture
     async def insights_registry(self):
         """Create insights registry instance"""
         from src.services.insights_registry import InsightsRegistry
@@ -513,7 +514,7 @@ class TestStatusAndAuditTrail:
 class TestSourceAttribution:
     """Test source attribution for insights (rule/ml/human/scenario)"""
     
-    @pytest.fixture
+    @pytest_asyncio.fixture
     async def insights_registry(self):
         """Create insights registry instance"""
         from src.services.insights_registry import InsightsRegistry
@@ -584,7 +585,7 @@ class TestSourceAttribution:
 class TestMarkdownDetailsStorage:
     """Test Markdown details rendering and storage"""
     
-    @pytest.fixture
+    @pytest_asyncio.fixture
     async def insights_registry(self):
         """Create insights registry instance"""
         from src.services.insights_registry import InsightsRegistry
@@ -676,7 +677,7 @@ anomalies = data[data['volume'] > threshold]
 class TestSearchAndFilteringPerformance:
     """Test search and filtering performance"""
     
-    @pytest.fixture
+    @pytest_asyncio.fixture
     async def insights_registry(self):
         """Create insights registry instance with test data"""
         from src.services.insights_registry import InsightsRegistry
