@@ -1,5 +1,5 @@
 {
-  "at": "2025-09-04T12:50:04.768465",
+  "at": "2025-09-04T13:30:52.419731",
   "root": ".",
   "tree": [
     ".",
@@ -24,176 +24,176 @@
     "      ├── components/"
   ],
   "stats": {
-    "total_files": 202,
+    "total_files": 205,
     "total_directories": 60,
     "fully_parsed": {
       "typescript": 134,
-      "python": 36,
+      "python": 38,
       "javascript": 7,
       "json": 13,
-      "markdown": 12
+      "markdown": 13
     },
-    "markdown_files": 12
+    "markdown_files": 13
   },
   "f": {
     "src/services/rag_service.py": [
       "p",
       [
-        "_load_model",
-        "_generate_answer",
-        "_create_indexes",
         "_build_scope_levels",
-        "extract_and_resolve_ids",
-        "_calculate_confidence",
-        "ScopedRetriever",
+        "initialize",
+        "search",
         "get_document_count",
+        "_truncate_to_token_limit",
+        "_create_indexes",
+        "parse_id",
         "provide_feedback",
-        "parse_id"
+        "_calculate_confidence",
+        "_create_tables"
       ]
     ],
     "src/services/llm_agent_gateway.py": [
       "p",
       [
-        "_get_routing_reason",
-        "CostTracker",
-        "_determine_provider_order",
-        "record_success",
-        "record_consent",
-        "class",
-        "get_technical_term",
-        "get_health_report",
-        "store_data",
-        "start"
+        "analyze_technical_content",
+        "report_degradation",
+        "send_prompt",
+        "start",
+        "get_state",
+        "truncate_context",
+        "get_provider_status",
+        "set_budget_alert_handler",
+        "RegionalComplianceManager",
+        "get_deletion_audit"
       ]
     ],
     "src/services/scenario_engine.py": [
       "p",
       [
-        "_select_provider",
-        "_calculate_flag_counts",
-        "_validate_insight_id",
-        "_get_cache_key",
-        "_gpt4_available",
-        "resolve_insight_references",
         "from_id",
-        "_calculate_data_quality",
-        "to_dict",
-        "ScenarioEngine"
+        "__post_init__",
+        "apply_seasonal_adjustment",
+        "format_diff_swedish",
+        "DiffGenerator",
+        "resolve_insight_references",
+        "_extract_supplier_metadata",
+        "_select_provider",
+        "KPICalculator",
+        "_calculate_flag_counts"
       ]
     ],
     "src/services/rag_optimizer.py": [
       "p",
       [
-        "_generate_cache_key",
-        "_build_query_params",
-        "BatchProcessor",
-        "ConnectionPool",
-        "IndexManager",
+        "_maintenance_loop",
+        "_execute_batch",
+        "initialize",
+        "get",
+        "parallel_search",
         "flush",
-        "class",
-        "QueryOptimizer",
-        "close",
-        "_health_check_loop"
+        "set",
+        "_get_cached_result",
+        "_build_query_params",
+        "class"
       ]
     ],
     "src/services/storage_encryption_service.ts": [
       "t",
       [
-        "catch",
+        "StorageEncryptionService",
         "constructor",
         "for",
-        "if",
-        "StorageEncryptionService"
+        "catch",
+        "if"
       ]
     ],
     "src/services/evidence-pack-export.ts": [
       "t",
       [
-        "catch",
-        "while",
+        "DataIntegrityValidator",
         "EvidencePackExporter",
         "constructor",
-        "for",
-        "if",
         "ComplianceValidator",
+        "catch",
         "switch",
-        "DataIntegrityValidator"
+        "for",
+        "while",
+        "if"
       ]
     ],
     "src/services/audit-logger.ts": [
       "t",
       [
-        "catch",
         "constructor",
-        "for",
-        "if",
+        "AuditLogger",
         "switch",
-        "AuditLogger"
+        "for",
+        "catch",
+        "if"
       ]
     ],
     "src/services/email_authentication_service.ts": [
       "t",
       [
-        "catch",
         "constructor",
         "for",
-        "if",
-        "EmailAuthenticationService"
+        "EmailAuthenticationService",
+        "catch",
+        "if"
       ]
     ],
     "src/services/email_webhook_processor.ts": [
       "t",
       [
-        "catch",
-        "EmailWebhookProcessor",
         "constructor",
         "for",
-        "if"
+        "catch",
+        "if",
+        "EmailWebhookProcessor"
       ]
     ],
     "src/services/agent_audit.ts": [
       "t",
       [
-        "catch",
         "constructor",
+        "AgentAuditLogger",
         "for",
-        "if",
-        "AgentAuditLogger"
+        "catch",
+        "if"
       ]
     ],
     "src/services/agent_guardrails.ts": [
       "t",
       [
-        "catch",
-        "PIIDetectionError",
-        "PolicyValidator",
         "ActionTracker",
         "PolicyViolationError",
-        "TraceabilityError",
-        "PIIDetector",
-        "AgentGuardrails",
+        "ConfirmationWorkflow",
+        "ConfirmationRequiredError",
+        "constructor",
         "SecurityEnforcer",
-        "UnauthorizedActionError"
+        "switch",
+        "AgentGuardrails",
+        "for",
+        "PolicyValidator"
       ]
     ],
     "src/services/evidence-pack-compliance.ts": [
       "t",
       [
-        "catch",
+        "EvidencePackComplianceValidator",
         "constructor",
         "for",
-        "EvidencePackComplianceValidator",
+        "catch",
         "if"
       ]
     ],
     "src/services/evidence-pack-batch.ts": [
       "t",
       [
+        "constructor",
         "catch",
+        "for",
         "EvidencePackBatchProcessor",
         "while",
-        "constructor",
-        "for",
         "if",
         "processLoop"
       ]
@@ -201,9 +201,9 @@
     "src/services/object-storage-client.ts": [
       "t",
       [
-        "catch",
-        "ObjectStorageClient",
         "constructor",
+        "ObjectStorageClient",
+        "catch",
         "if",
         "transition"
       ]
@@ -211,20 +211,20 @@
     "src/services/llm-tools/orchestrator.ts": [
       "t",
       [
-        "ClaudeProvider",
         "createLLMToolOrchestrator",
-        "if",
+        "AuditLogger",
         "GeminiProvider",
+        "ClaudeProvider",
+        "if",
         "ProposalHandler",
-        "GPT4Provider",
-        "AuditLogger"
+        "GPT4Provider"
       ]
     ],
     "src/services/llm-tools/schemas.ts": [
       "t",
       [
-        "getToolSchemas",
         "if",
+        "getToolSchemas",
         "validateToolInput",
         "generateJSONSchemas"
       ]
@@ -232,102 +232,102 @@
     "src/services/llm-tools/index.ts": [
       "t",
       [
-        "getAvailableTools",
-        "to"
+        "to",
+        "getAvailableTools"
       ]
     ],
     "src/services/llm-tools/tools/reports-tool.ts": [
       "t",
       [
-        "for",
         "ReportComposeTool",
+        "for",
         "if"
       ]
     ],
     "src/services/llm-tools/tools/warehouse-sql-tool.ts": [
       "t",
       [
-        "WarehouseSQLTool",
         "for",
-        "if"
+        "if",
+        "WarehouseSQLTool"
       ]
     ],
     "src/services/llm-tools/tools/insights-tool.ts": [
       "t",
       [
-        "InsightSearchTool",
-        "InsightCreateTool",
         "InsightLinkTool",
+        "InsightCreateTool",
+        "if",
         "InsightUpdateTool",
-        "if"
+        "InsightSearchTool"
       ]
     ],
     "src/services/llm-tools/tools/metrics-tool.ts": [
       "t",
       [
         "MetricsTool",
-        "switch",
-        "if"
+        "if",
+        "switch"
       ]
     ],
     "src/services/llm-tools/tools/explain-rule-tool.ts": [
       "t",
       [
-        "ExplainRuleTool",
-        "if"
+        "if",
+        "ExplainRuleTool"
       ]
     ],
     "src/services/llm-tools/tools/scenarios-tool.ts": [
       "t",
       [
-        "catch",
         "ScenarioPlanTool",
+        "if",
         "ScenarioRunTool",
-        "if"
+        "catch"
       ]
     ],
     "src/services/llm-tools/optimizations/performance-optimizer.ts": [
       "t",
       [
-        "catch",
-        "ConnectionPoolManager",
-        "QueryOptimizer",
-        "OptimizedToolOrchestrator",
-        "CacheManager",
         "MetricsCollector",
+        "RequestRouter",
+        "OptimizedToolOrchestrator",
         "BatchProcessor",
         "constructor",
+        "QueryOptimizer",
         "for",
+        "CacheManager",
+        "catch",
         "if"
       ]
     ],
     "src/services/llm-tools/base/tool-server.ts": [
       "t",
       [
-        "catch",
-        "export",
-        "ToolOrchestrator",
         "SecurityValidator",
-        "CircuitBreaker",
         "SwedishFormatter",
-        "RateLimiter",
         "constructor",
         "for",
-        "if"
+        "CircuitBreaker",
+        "RateLimiter",
+        "catch",
+        "ToolOrchestrator",
+        "if",
+        "export"
       ]
     ],
     "components/insights/insights-list-interface.tsx": [
       "t",
       [
-        "forEach",
-        "toggleSelectAll",
+        "copyToClipboard",
         "getStatusBadge",
-        "getSeverityIcon",
+        "toggleSelectAll",
+        "forEach",
         "toggleSelection",
         "InsightsListInterface",
         "if",
-        "copyToClipboard",
-        "toggleRowExpansion"
+        "toggleRowExpansion",
+        "getSeverityIcon"
       ]
     ],
     "components/ui/slider.tsx": [
@@ -353,9 +353,9 @@
       [
         "handleClear",
         "handleApply",
-        "MonthRangePicker",
         "if",
-        "formatDisplay"
+        "formatDisplay",
+        "MonthRangePicker"
       ]
     ],
     "components/ui/dropdown-menu.tsx": [
@@ -367,9 +367,9 @@
     "components/ui/select.tsx": [
       "t",
       [
-        "handleClick",
         "if",
-        "handleClickOutside"
+        "handleClickOutside",
+        "handleClick"
       ]
     ],
     "components/ui/skeleton.tsx": [
@@ -381,64 +381,64 @@
     "components/copilot/CopilotDock.tsx": [
       "t",
       [
-        "CopilotDock",
-        "if"
+        "if",
+        "CopilotDock"
       ]
     ],
     "components/copilot/ProposalCard.tsx": [
       "t",
       [
-        "ProposalCard",
         "getConfidenceBadge",
-        "if"
+        "if",
+        "ProposalCard"
       ]
     ],
     "components/copilot/MessageList.tsx": [
       "t",
       [
-        "MessageList",
         "renderMessage",
-        "renderCitation",
-        "if"
+        "if",
+        "MessageList",
+        "renderCitation"
       ]
     ],
     "components/copilot/CopilotDock-old.tsx": [
       "t",
       [
-        "exportConversation",
+        "handleKeyDown",
         "toggleLanguage",
-        "CopilotDock",
+        "exportConversation",
         "handleSendMessage",
         "if",
-        "handleKeyDown"
+        "CopilotDock"
       ]
     ],
     "components/copilot/ToolCallVisualization.tsx": [
       "t",
       [
-        "ToolCallVisualization",
-        "switch",
         "getStatusText",
-        "getStatusIcon"
+        "getStatusIcon",
+        "ToolCallVisualization",
+        "switch"
       ]
     ],
     "components/layout/navigation-shell.tsx": [
       "t",
       [
-        "switch",
         "handleKeyDown",
         "if",
-        "handleItemClick"
+        "handleItemClick",
+        "switch"
       ]
     ],
     "components/dashboard/insight-card.tsx": [
       "t",
       [
-        "handleCardClick",
-        "if",
-        "handleActionClick",
+        "handleKeyDown",
         "switch",
-        "handleKeyDown"
+        "handleCardClick",
+        "handleActionClick",
+        "if"
       ]
     ],
     "components/dashboard/clearance-bar.tsx": [
@@ -452,11 +452,11 @@
     "components/dashboard/confidence-chip.tsx": [
       "t",
       [
+        "handleKeyDown",
         "ConfidenceIcon",
-        "handleClick",
-        "if",
         "switch",
-        "handleKeyDown"
+        "handleClick",
+        "if"
       ]
     ],
     "components/scenario-lab/InsightSearch.tsx": [
@@ -464,10 +464,10 @@
       [
         "InsightSearch",
         "clearSelection",
-        "handleSearchChange",
-        "handleInsightToggle",
+        "getSeverityColor",
         "switch",
-        "getSeverityColor"
+        "handleSearchChange",
+        "handleInsightToggle"
       ]
     ],
     "components/scenario-lab/ParameterControls.tsx": [
@@ -479,272 +479,272 @@
     "components/scenario-lab/scenario-lab.tsx": [
       "t",
       [
+        "handleKeyDown",
         "ScenarioLab",
-        "catch",
         "for",
-        "if",
-        "handleKeyDown"
+        "catch",
+        "if"
       ]
     ],
     "components/scenario-lab/scenario-lab-old.tsx": [
       "t",
       [
-        "ScenarioLab",
-        "handleInsightSearch",
-        "catch",
-        "handleCreateInsight",
-        "handleRun",
-        "if",
-        "handleParameterChange",
+        "handleSupplierSelect",
         "handleKeyDown",
+        "handleParameterChange",
+        "handleCreateInsight",
+        "ScenarioLab",
+        "if",
+        "handleInsightSearch",
         "handleInsightSelect",
-        "handleSave"
+        "catch",
+        "handleRun"
       ]
     ],
     "components/scenario-lab/CohortPicker.tsx": [
       "t",
       [
-        "CohortPicker",
+        "handleSupplierToggle",
         "handleMonthChange",
-        "handleSupplierToggle"
+        "CohortPicker"
       ]
     ],
     "components/scenario-lab/DiffVisualization.tsx": [
       "t",
       [
         "getStatusColor",
-        "getChangeColor",
-        "if",
-        "getTrendIcon",
         "switch",
-        "DiffVisualization"
+        "DiffVisualization",
+        "getChangeColor",
+        "getTrendIcon",
+        "if"
       ]
     ],
     "components/findings/findings-triage-interface.tsx": [
       "t",
       [
-        "handleClearFilters",
-        "handleSaveFilterPreset",
+        "handleViewModeChange",
         "handleLoadFilterPreset",
-        "renderSeverityBadge",
-        "renderSparkline",
         "handleExpandRow",
-        "handleSelectAll",
+        "handleSelectFinding",
+        "handleKeyDown",
         "switch",
-        "for",
-        "handleViewModeChange"
+        "handleBatchAction",
+        "renderSeverityBadge",
+        "confirmBatchAction",
+        "handleSelectAll"
       ]
     ],
     "components/workflow/checklist-panel.tsx": [
       "t",
       [
-        "ChecklistPanel",
         "getCategoryIcon",
-        "if",
+        "handleToggle",
         "switch",
+        "ChecklistPanel",
         "getStateDisplayName",
-        "ChecklistItemRow",
-        "handleToggle"
+        "if",
+        "ChecklistItemRow"
       ]
     ],
     "components/workflow/comment-drawer.tsx": [
       "t",
       [
-        "CommentItem",
         "CommentDrawer",
-        "getCommentFindings",
-        "insertMarkdown",
-        "getSelectedFindingsText",
         "handleAddComment",
-        "handleCancel"
+        "insertMarkdown",
+        "getCommentFindings",
+        "CommentItem",
+        "handleCancel",
+        "getSelectedFindingsText"
       ]
     ],
     "components/workflow/granskad-workflow.tsx": [
       "t",
       [
-        "catch",
-        "handleStateTransition",
-        "handleFindingUpdate",
-        "handleCommentAdd",
-        "canMarkAsReviewed",
-        "handleSnapshotConfirm",
-        "getChecklistProgress",
-        "handleChecklistItemToggle",
         "loadWorkflowData",
-        "if"
+        "handleStateTransition",
+        "handleSnapshotConfirm",
+        "map",
+        "getChecklistProgress",
+        "handleCommentAdd",
+        "handleChecklistItemToggle",
+        "canMarkAsReviewed",
+        "GranskadWorkflow",
+        "getStateDisplayName"
       ]
     ],
     "components/workflow/findings-table.tsx": [
       "t",
       [
-        "FindingRow",
-        "handleRowClick",
-        "getSeverityIcon",
-        "handleStatusChange",
-        "FindingsTable",
-        "handleSelectAll",
         "handleSort",
-        "if",
+        "handleSelectFinding",
+        "handleRowClick",
+        "FindingsTable",
         "switch",
-        "handleSelectFinding"
+        "FindingRow",
+        "handleSelectAll",
+        "if",
+        "handleStatusChange",
+        "getSeverityIcon"
       ]
     ],
     "components/workflow/snapshot-dialog.tsx": [
       "t",
       [
-        "catch",
-        "handleConfirm",
-        "SnapshotDialog",
         "generateDataHash",
-        "for"
+        "handleConfirm",
+        "for",
+        "catch",
+        "SnapshotDialog"
       ]
     ],
     "tests/test_agent_guardrails_safety.py": [
       "p",
       [
-        "test_privilege_escalation_detection",
-        "test_audit_search_and_compliance_reporting",
-        "test_detect_english_pii",
+        "TestSecurityEnforcer",
+        "test_concurrent_session_limiting",
+        "TestPolicyValidator",
+        "test_batch_pii_scanning",
         "test_trace_determinism_validation",
-        "test_data_access_boundaries",
-        "test_tool_permission_validation",
-        "test_pii_redaction_suggestions",
-        "TestPIIDetector",
-        "test_audit_trail_integrity",
-        "run_async_tests"
+        "test_rate_limiting",
+        "run_async_tests",
+        "test_proposal_timeout",
+        "test_suspicious_pattern_detection",
+        "test_pii_redaction_suggestions"
       ]
     ],
     "tests/test_llm_agent_gateway.py": [
       "p",
       [
-        "test_gdpr_compliant_prompt_logging",
-        "network_failure_then_success",
-        "test_provider_service_degradation",
-        "test_swedish_character_handling",
-        "test_provider_fallback_chain",
-        "degraded_response",
-        "test_semantic_cache_matching",
-        "TestCostManagement",
-        "slow_response",
-        "test_batch_processing_timeout"
+        "test_automatic_failover_on_degradation",
+        "test_invalid_api_credentials",
+        "test_context_window_management",
+        "test_mixed_language_handling",
+        "language_detector",
+        "test_budget_enforcement_per_user",
+        "test_rate_limit_handling",
+        "test_token_limit_exceeded",
+        "test_all_providers_fail",
+        "test_batch_processing_multiple_requests"
       ]
     ],
     "tests/test_scenario_engine_determinism.py": [
       "p",
       [
-        "test_seasonal_variations",
-        "test_edge_case_empty_dataset",
-        "test_performance_median_target",
-        "test_diff_generation",
-        "test_insight_referencing",
+        "test_kpi_recalculation_review_progress",
         "test_kpi_recalculation_anomaly_burden",
-        "test_edge_case_invalid_parameters",
+        "test_transaction_rollback",
+        "test_snapshot_immutability",
+        "test_performance_p95_target",
+        "valid_scenario_params",
+        "test_edge_case_empty_dataset",
+        "test_swedish_municipality_handling",
         "class",
-        "import",
-        "scenario_engine"
+        "test_swedish_supplier_cohorts"
       ]
     ],
     "tests/test_dbt_models.py": [
       "p",
       [
-        "test_macro_usage_in_models",
-        "test_dbt_project_yml_exists",
+        "dbt_runner",
+        "test_dbt_test_execution",
+        "TestDbtModels",
+        "TestDbtModelConfiguration",
+        "test_dbt_compile",
+        "test_freshness_checks",
         "test_dbt_run",
-        "test_dbt_deps",
-        "test_generate_docs",
-        "test_profiles_yml_configuration",
-        "test_dbt_source_definitions",
-        "test_schema_tests",
-        "test_model_documentation",
-        "TestDbtDocumentation"
+        "test_dbt_snapshot",
+        "test_model_lineage",
+        "TestDbtTests"
       ]
     ],
     "tests/test_human_friendly_ids.py": [
       "p",
       [
-        "test_id_range_query_performance",
-        "test_insight_id_format",
-        "test_custom_prefix_support",
-        "id_generator",
-        "test_scenario_id_format",
-        "test_id_persistence",
-        "test_sequence_gap_handling",
-        "test_id_validation",
-        "test_id_audit_trail",
-        "test_id_prefix_index"
+        "db_connection",
+        "test_year_rollover",
+        "test_id_case_sensitivity",
+        "test_month_rollover",
+        "test_id_immutability",
+        "test_id_format_constraint",
+        "test_id_lookup_performance",
+        "test_id_reserved_sequences",
+        "TestIDQueryPerformance",
+        "test_id_range_query_performance"
       ]
     ],
     "tests/test_database_schema.py": [
       "p",
       [
-        "test_checklist_run_table",
-        "db_engine",
-        "test_check_constraints",
-        "test_migration_rollback_safety",
-        "test_migration_scripts_exist",
-        "test_swedish_text_columns",
+        "TestDatabaseMigrations",
+        "test_cascade_delete_rules",
         "TestDatabaseConstraints",
-        "test_not_null_constraints",
         "test_migration_data_preservation",
-        "TestDatabaseSchemaCreation"
+        "test_not_null_constraints",
+        "db_session",
+        "test_swedish_text_columns",
+        "test_foreign_key_constraints",
+        "test_row_table_schema",
+        "test_check_constraints"
       ]
     ],
     "tests/test_xlsx_parser.py": [
       "p",
       [
-        "test_parse_xlsx_invalid_file_format",
-        "TestSwedishXLSXParser",
         "TestXLSXParserPerformance",
-        "test_parse_xlsx_large_file_streaming",
-        "tearDown",
+        "test_parse_xlsx_with_formulas",
         "test_parse_xlsx_empty_file",
-        "setUp",
-        "test_memory_efficient_parsing",
+        "test_parse_xlsx_with_swedish_characters_in_data",
+        "test_parse_performance_small_file",
+        "test_parse_xlsx_invalid_file_format",
         "test_parse_xlsx_with_mixed_encoding",
-        "test_parse_performance_small_file"
+        "test_parse_xlsx_with_swedish_characters_in_headers",
+        "TestSwedishXLSXParser",
+        "test_parse_xlsx_corrupted_file"
       ]
     ],
     "tests/test_duckdb_analytics.py": [
       "p",
       [
-        "test_category_analysis_performance",
+        "test_materialized_view_refresh",
         "test_window_functions_performance",
-        "setup_test_data",
-        "test_duckdb_postgres_connection",
-        "test_columnar_storage_benefits",
-        "test_query_plan_optimization",
+        "TestDuckDBPostgreSQLSync",
+        "TestAnalyticsOptimization",
+        "test_anomaly_detection_query",
         "test_transaction_consistency",
-        "test_real_time_sync",
-        "test_monthly_aggregation_performance",
-        "test_anomaly_detection_query"
+        "test_query_plan_optimization",
+        "test_category_analysis_performance",
+        "test_pivot_table_generation",
+        "setup_test_data"
       ]
     ],
     "tests/test_cross_database_consistency.py": [
       "p",
       [
+        "write_task",
+        "test_data_freshness_sync",
+        "test_retention_policy_configuration",
+        "TestDataConsistency",
+        "encryption_key",
+        "test_field_level_encryption",
         "TestComplianceValidation",
-        "test_concurrent_write_consistency",
-        "test_key_rotation",
-        "duck_connection",
-        "test_schema_evolution_sync",
+        "test_data_locality_compliance",
         "test_encryption_in_transit",
-        "test_gdpr_compliance_checklist",
-        "test_encryption_at_rest",
-        "test_transaction_atomicity",
-        "TestDataRetention"
+        "test_audit_trail_retention"
       ]
     ],
     "tests/test_eu_format_handler.py": [
       "p",
       [
-        "test_parse_two_digit_years",
-        "test_confidence_scoring",
-        "test_batch_parse_dates",
-        "test_invalid_format_handling",
-        "test_normalize_to_iso",
-        "TestEUDateParser",
-        "test_handle_scientific_notation",
+        "test_format_output",
+        "test_convert_swedish_decimal_comma",
+        "test_convert_percentages",
         "test_auto_detect_decimal_format",
+        "setUp",
+        "test_parse_datetime_with_time",
+        "test_detect_date_format",
+        "test_batch_conversion",
         "test_convert_us_decimal_dot",
         "test_large_dataset_conversion"
       ]
@@ -752,76 +752,76 @@
     "tests/test_index_performance.py": [
       "p",
       [
-        "test_index_fragmentation_monitoring",
-        "test_multicolumn_statistics",
-        "TestIndexPerformance",
-        "test_covering_index_performance",
-        "test_supplier_month_combo_query_performance",
-        "test_partial_index_efficiency",
-        "test_supplier_query_performance",
+        "db_connection",
         "test_gin_index_for_jsonb",
-        "setup_large_dataset",
-        "query_task"
+        "AS",
+        "query_task",
+        "test_expression_index",
+        "test_month_range_query_performance",
+        "test_partial_index_efficiency",
+        "test_brin_index_for_time_series",
+        "test_index_maintenance_impact",
+        "test_covering_index_performance"
       ]
     ],
     "tests/test_pgvector_performance.py": [
       "p",
       [
-        "test_embedding_insertion_performance",
-        "test_vector_index_size_and_performance",
-        "test_null_embedding_handling",
+        "test_multi_vector_search_performance",
+        "db_connection",
+        "sample_embeddings",
+        "AS",
+        "TestPgVectorPerformance",
         "embedding_model",
-        "search_task",
-        "swedish_model",
-        "test_similarity_search_performance",
-        "cls",
         "test_filtered_similarity_search_performance",
-        "test_swedish_semantic_similarity"
+        "TestEmbeddingQuality",
+        "test_vector_index_size_and_performance",
+        "swedish_model"
       ]
     ],
     "tests/test_rag_system.py": [
       "p",
       [
-        "sample_documents",
-        "rag_service",
+        "TestVectorSimilaritySearch",
+        "doesn",
+        "test_id_parsing_and_validation",
+        "TestScopedRetrieval",
         "TestEmbeddingGeneration",
-        "test_cross_table_search",
-        "test_hierarchical_fallback",
-        "test_batch_id_resolution",
+        "sample_texts",
+        "TestHumanFriendlyIDResolution",
         "test_rag_with_context_window_management",
-        "test_supplier_scoped_retrieval",
-        "test_similarity_search_relevance",
-        "sample_texts"
+        "test_end_to_end_rag_query",
+        "sample_documents"
       ]
     ],
     "tests/test_personnummer_validator.py": [
       "p",
       [
-        "test_redact_with_full_masking",
+        "TestPersonnummerValidator",
+        "TestPersonnummerIntegration",
         "test_validate_invalid_date",
+        "test_validate_10_digit_format",
         "test_redact_audit_log",
         "test_redact_with_partial_masking",
-        "test_redact_personnummer_in_text",
-        "test_validate_and_redact_pipeline",
+        "test_redact_preserves_context",
+        "setUp",
         "test_validate_coordination_number",
-        "test_validate_invalid_luhn_checksum",
-        "test_redact_multiple_formats",
-        "test_redact_performance"
+        "test_validate_and_redact_pipeline"
       ]
     ],
     "tests/test_claude_code_hooks.py": [
       "p",
       [
-        "test_pre_write_validation_hook",
-        "async_validator",
+        "csv_only_hook",
+        "test_hook_metrics_collection",
+        "test_batch_file_validation",
+        "test_execute_hook_chain",
         "test_hook_interruption_on_failure",
-        "tearDown",
-        "test_validate_personnummer_compliance",
-        "test_validation_caching",
-        "test_mcp_resource_access",
-        "TestMCPToolIntegration",
-        "test_register_hooks",
-        "test_full_validation_pipeline"
+        "test_hook_configuration_validation",
+        "error_handler",
+        "setUp",
+        "test_validate_swedish_content",
+        "test_mcp_tool_async_execution"
       ]
     ],
     "tests/llm-tools/test_scenarios_tool.ts": [
@@ -846,15 +846,15 @@
     "tests/llm-tools/setup.ts": [
       "t",
       [
-        "catch",
-        "createMockLogger",
-        "mockPerformanceNow",
         "generateSwedishTestData",
-        "createMockCache",
+        "createMockTool",
+        "createMockLogger",
         "createMockDatabase",
-        "createMockProvider",
+        "catch",
+        "createMockCache",
+        "mockPerformanceNow",
         "if",
-        "createMockTool"
+        "createMockProvider"
       ]
     ],
     "tests/llm-tools/test_explain_rule_tool.ts": [
@@ -866,16 +866,16 @@
     "tests/frontend/granskad/setup.ts": [
       "t",
       [
-        "length",
-        "ResizeObserver",
-        "generateMockPersonnummer",
+        "disconnect",
         "mockSwedishDate",
-        "function",
-        "IntersectionObserver",
-        "waitForAsync",
-        "observe",
         "takeRecords",
-        "localStorageMock"
+        "constructor",
+        "generateMockPersonnummer",
+        "length",
+        "localStorageMock",
+        "unobserve",
+        "IntersectionObserver",
+        "waitForAsync"
       ]
     ],
     "tests/frontend/__mocks__/simple-server.ts": [
@@ -887,10 +887,10 @@
     "tests/frontend/__mocks__/findings-mocks.ts": [
       "t",
       [
+        "to",
         "for",
         "filterFindings",
-        "generateMockFindings",
-        "to"
+        "generateMockFindings"
       ]
     ],
     "tests/frontend/__mocks__/server.ts": [
@@ -902,16 +902,16 @@
     "tests/frontend/scenario-lab/mocks/scenario-mocks.ts": [
       "t",
       [
-        "simulateKPIUpdate",
+        "disconnect",
         "simulateError",
         "MockScenarioWebSocket",
-        "connect",
-        "mockScenarioAPI",
-        "disconnect",
         "for",
+        "mockScenarioAPI",
+        "connect",
+        "emit",
+        "simulateKPIUpdate",
         "generateMockHeatmapData",
-        "if",
-        "simulateProgressUpdate"
+        "if"
       ]
     ],
     "tests/infrastructure/email-webhook-processor.test.ts": [
@@ -924,8 +924,8 @@
     "tests/infrastructure/storage-encryption.test.ts": [
       "t",
       [
-        "catch",
-        "for"
+        "for",
+        "catch"
       ]
     ]
   },
@@ -939,5 +939,5 @@
     "tests": "Test suites and test utilities",
     "config": "Configuration files"
   },
-  "staleness": 1756983004
+  "staleness": 1756985452
 }
