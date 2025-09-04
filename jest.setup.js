@@ -1,4 +1,12 @@
 import '@testing-library/jest-dom'
+import 'whatwg-fetch'
+// Use simple server to avoid MSW module resolution issues
+import { server } from './tests/frontend/__mocks__/simple-server'
+
+// Setup MSW
+beforeAll(() => server.listen())
+afterEach(() => server.resetHandlers())
+afterAll(() => server.close())
 
 // Mock Next.js router
 jest.mock('next/router', () => ({
@@ -48,6 +56,16 @@ jest.mock('crypto', () => ({
   createCipheriv: jest.fn(),
   createDecipheriv: jest.fn(),
 }))
+
+// Mock document.body.style for Dialog component
+if (typeof document !== 'undefined' && document.body && !document.body.style) {
+  document.body.style = {};
+}
+
+// Mock Radix UI Dialog components
+jest.mock('@/components/ui/dialog', () => require('./tests/frontend/__mocks__/dialog-mock.tsx'))
+// Mock Radix UI Tooltip components
+jest.mock('@/components/ui/tooltip', () => require('./tests/frontend/__mocks__/tooltip-mock.tsx'))
 
 // Mock window.matchMedia for theme provider
 Object.defineProperty(window, 'matchMedia', {

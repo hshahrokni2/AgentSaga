@@ -128,21 +128,21 @@ class TestInsightClustering:
             {
                 "id": "INS-2024-03-001",
                 "title": "High waste volume on weekends",
-                "embedding": [0.1, 0.2, 0.3],  # Mock embedding
+                "embedding": [1.0, 0.0, 0.0],  # Mock embedding
                 "supplier": "supplier-1",
                 "month": "2024-03"
             },
             {
                 "id": "INS-2024-03-002",
                 "title": "Elevated waste amounts during weekends",
-                "embedding": [0.11, 0.21, 0.29],  # Similar embedding
+                "embedding": [0.95, 0.05, 0.0],  # Similar embedding
                 "supplier": "supplier-1",
                 "month": "2024-03"
             },
             {
                 "id": "INS-2024-03-003",
                 "title": "Missing invoice data",
-                "embedding": [0.9, 0.8, 0.7],  # Different embedding
+                "embedding": [0.0, 1.0, 0.0],  # Different embedding
                 "supplier": "supplier-1",
                 "month": "2024-03"
             }

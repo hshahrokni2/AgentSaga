@@ -12,6 +12,7 @@ const customJestConfig = {
   moduleNameMapper: {
     '^@/components/(.*)$': '<rootDir>/components/$1',
     '^@/lib/(.*)$': '<rootDir>/lib/$1',
+    '^@/hooks/(.*)$': '<rootDir>/hooks/$1',
     '^@/config/(.*)$': '<rootDir>/config/$1',
     '^@/src/(.*)$': '<rootDir>/src/$1',
     '^@/providers/(.*)$': '<rootDir>/providers/$1',
@@ -33,8 +34,10 @@ const customJestConfig = {
     '^.+\\.(ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
   },
   transformIgnorePatterns: [
-    'node_modules/(?!(.*\\.mjs$|react-i18next))',
+    '/node_modules/(?!(@mswjs|msw|.*\\.mjs$|react-i18next))',
   ],
+  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
+  moduleDirectories: ['node_modules', '<rootDir>'],
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
